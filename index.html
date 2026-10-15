@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - Attendance System</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; text-align: center; padding-top: 100px;">
+
+    <div style="background: white; width: 300px; margin: auto; padding: 20px; border-radius: 8px; box-shadow: 0px 0px 10px rgba(0,0,0,0.1);">
+        <h2>Login Portal</h2>
+        
+        <div style="margin-bottom: 15px; text-align: left;">
+            <label>Select Role:</label><br>
+            <select id="role" style="width: 100%; padding: 8px; margin-top: 5px;">
+                <option value="user">Student</option>
+                <option value="admin">Admin</option>
+            </select>
+        </div>
+
+        <div style="margin-bottom: 15px; text-align: left;">
+            <label>Email / ID:</label><br>
+            <input type="text" placeholder="Enter ID" style="width: 100%; padding: 8px; margin-top: 5px;">
+        </div>
+
+        <div style="margin-bottom: 15px; text-align: left;">
+            <label>Password:</label><br>
+            <input type="password" placeholder="Enter Password" style="width: 100%; padding: 8px; margin-top: 5px;">
+        </div>
+
+        <button onclick="login()" style="width: 100%; padding: 10px; background: #007BFF; color: white; border: none; border-radius: 4px; cursor: pointer;">Login</button>
+    </div>
+
+    <script>
+        function login() {
+            let role = document.getElementById("role").value;
+            if (role === "admin") {
+                window.location.href = "admin.html";
+            } else {
+                window.location.href = "user.html";
+            }
+        }
+    </script>
+
+</body>
+</html>
